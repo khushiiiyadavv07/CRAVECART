@@ -17,7 +17,7 @@ function PasswordInput({label, value, onChange, placeholder, id}){
                     type = {`${showPassword?"text":"password"}`}
                     placeholder = {placeholder}
                     onChange = {onChange}
-                    className="w-full rounded-lg px-3 py-2 border border-[#ddd] focus:outline-none focus:border-orange-500"
+                    className="w-full rounded-lg px-3 py-2 border border-[#ddd] focus:outline-none focus:border-[#064d4f] focus:outline-none"
                 />
                 <button className="absolute right-3 top-3.25 text-gray-500" 
                     onClick={()=>setShowPassword(prev=>!prev)}>

@@ -5,6 +5,7 @@ const connectToDatabase = require("./config/database.js");
 const cookieParser = require("cookie-parser");
 const Authrouter = require("./routes/auth.routes.js");
 const cors = require("cors");
+const Userrouter = require("./routes/user.routes.js");
 
 //this cors will b used for connecting the frontend to the backend
 app.use(cors({
@@ -18,6 +19,7 @@ dotenv.config();
 const port = process.env.PORT;
 
 app.use("/api/auth", Authrouter);
+app.use("/api/user", Userrouter);
 
 app.get("/",(req,res)=>{
     res.send("CraveCart");

@@ -13,7 +13,6 @@ const genToken = async (userId) => {
     }
     catch(err){
         console.log("Error while generating the token : ",err);
-        return res.status(500).json(`Token error ${err}`);
     }   
 };
 

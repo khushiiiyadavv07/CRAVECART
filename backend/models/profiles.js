@@ -15,14 +15,39 @@ const ProfileSchema = new mongoose.Schema({
         type : String
     },
     mobile : {
-        type : Number,
-        unique : true,
-        required : true
+        type : String
     },
     role : {
         type : String,
         enum : ["user","owner","deliveryBoy"],
-        required : true
+        required : true,
+        default : "user"
+    },
+    authStatus:{
+        type : String,
+        enum : ["google","normal"],
+        default : "local"
+    },
+    //for otp verification =>
+    resetOtp : {
+        type : String,
+    },
+    isOtpVerified : {
+        type : Boolean,
+        default : false
+    },
+    otpExpires : {
+        type : Date
+    },
+    otpAttempts : {
+        type : Number,
+        default : 0
+    },
+    otpBlockedUntil : {
+        type : Date
+    },
+    lastOtpSent :{
+        type : Date
     }
 },
 { timestamps : true});

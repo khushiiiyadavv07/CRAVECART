@@ -1,9 +1,9 @@
 
-function InputElement({label, placeholder, value, onChange, type, id}){
+function InputElement({label, placeholder, value, onChange, type, id,maxlength, required}){
     
     return(
         <div className="mb-4">
-            <label htmlFor={id} className="block text-gray-700 font-medium mb-1">
+            <label htmlFor={id} className="block text-gray-700 font-medium mb-2">
                 {label}
             </label>
             <input 
@@ -12,7 +12,9 @@ function InputElement({label, placeholder, value, onChange, type, id}){
                placeholder = {placeholder}
                value = {value}
                onChange = {onChange}
-               className="w-full rounded-lg px-3 py-2 border border-[#ddd] focus:outline-none focus:border-orange-500"
+               maxLength = {maxlength} 
+               className="w-full rounded-lg px-3 py-2 border border-[#ddd] focus:outline-none focus:border-[#064d4f] focus:outline-none"
+               required = {required}
             />
         </div>
     );
